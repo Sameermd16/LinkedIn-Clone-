@@ -57,6 +57,9 @@ const Header=  (props) =>  {
                                 <img src="/images/down-icon.svg"/>
                             </span>
                         </a>
+                        <SignOut>
+                            <a>Sign Out</a>
+                        </SignOut>
                     </User>
                     <Work>
                         <a>
@@ -67,6 +70,9 @@ const Header=  (props) =>  {
                             </span>
                         </a>
                     </Work>
+                    <Premium>
+                        <a>Try premium for free</a>
+                    </Premium>
                 </NavListWrap>
             </Nav>
         </Content>
@@ -193,6 +199,7 @@ const NavList = styled.li`
         color: rgba(0, 0, 0, 0.6);
         display: flex;
         align-items: center;
+        cursor: pointer;
         }
         @media (max-width: 768px) {
             min-width: 70px;
@@ -207,15 +214,53 @@ const NavList = styled.li`
     }
 `;
 
+const SignOut = styled.div`
+    cursor: pointer;
+    position: absolute;
+    top: 45px;
+    background-color: white;
+    /* width: 100px;  */
+    border-radius: 0 0 5px 5px;
+    transition-duration: 167ms;
+    text-align: center;
+    display: none;
+
+`;
+
 const User = styled(NavList)`
+    cursor: pointer;
     a > img {
         width: 25px;
         height: 25px;
         border-radius: 50%;
     }
+    &:hover {
+        ${SignOut} {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 `;
 
-const Work = styled(User)``;
+const Work = styled(User)`
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+`;
+
+const Premium = styled(User)`
+    a {
+        text-decoration: underline;
+        color: #D4AF37;
+        width: 100px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform .2s ease-in-out;
+    }
+    a:hover{ 
+        color: black;
+    }
+`;
+
 
 
 
