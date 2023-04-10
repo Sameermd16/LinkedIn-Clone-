@@ -26,9 +26,27 @@ const Leftside = (props) => {
                 <Item>
                     <span>
                         <img src="/images/item-icon.svg" alt=""/>
+                        My items
                     </span>
                 </Item>
             </ArtCard>
+            <CommunityCard>
+                <a>
+                    <span>Groups</span>
+                </a>
+                <a>
+                    <span> 
+                        Events 
+                        <img src="images/plus-icon.svg" alt=""/>
+                    </span>
+                </a>
+                <a>
+                    <span>Follow Hashtags</span>
+                </a>
+                <a>
+                    <span>Discover more</span>
+                </a>
+            </CommunityCard>
         </Container>
     )
 }
@@ -42,11 +60,11 @@ const ArtCard = styled.div`
     position: relative;
     text-align: center;
     margin-bottom: 8px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #fff;
     border: none;
     transition: box-shadow 83ms;
-    box-shadow: 0 0 0 1px rgba(0 0 0 / 15%) rgba(0 0 0 / 20%);
+    box-shadow: 0 0 0 1px rgba(0 0 0 / 15%), 0 0 0 rgba(0 0 0 / 20%);
     overflow: hidden;
 `;
 
@@ -94,6 +112,7 @@ const AddPhotoText = styled.div`
     font-size: 12px;
     line-height: 1.33;
     font-weight: 400;
+    cursor: pointer;
 `;
 
 const Widget = styled.div`
@@ -124,9 +143,55 @@ const Widget = styled.div`
     }
 `;
 
-const Item = styled.a``;
+const Item = styled.a`
+    border-color: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    span {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        cursor: pointer;
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+`;
 
+const CommunityCard = styled(ArtCard)`
+    padding: 8px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    a {
+        padding: 4px 12px;
+        font-size: 12px;
+        cursor: pointer;
+        &:hover {
+            color: #0a66c2;
+        }
+        span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 1px solid black; */
+        }
+        &:last-child {
+            color: rgba(0, 0, 0, 0.6);
+            border-top: 1px solid #d6cec2;
+            padding: 12px;
+            /* border: 1px solid black; */
 
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
+    
+
+`;
 
 
 

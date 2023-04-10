@@ -16,6 +16,7 @@ const Home = (props) => {
 }
 
 const Container = styled.div`
+    margin-top: 20px;
     padding-top: 52px;
     max-width: 100%;
 `;
@@ -28,6 +29,8 @@ const Layout = styled.div`
     grid-template-areas: "leftside main rightside";
     grid-template-rows: auto;
     gap: 25px;
+    max-width: 1128px;
+    margin: auto;
 
     @media (max-width: 768px) {
         display: flex;

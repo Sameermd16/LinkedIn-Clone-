@@ -89,7 +89,7 @@ const Container = styled.div`
     top: 0;
     width: 100vw;
     z-index: 100;
-    padding: 0 24px;
+    /* padding: 0 24px; */
 `;
 
 const Content = styled.div`
