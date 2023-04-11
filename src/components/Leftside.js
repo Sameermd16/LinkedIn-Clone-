@@ -85,7 +85,7 @@ const CardBackground = styled.div`
 
 const Photo = styled.div`
     box-shadow: none;
-    background-image: url('/images/photo.svg');
+    background-image: url('/images/sameer.jpeg');
     width: 72px;
     height: 72px;
     box-sizing: border-box;
@@ -93,7 +93,7 @@ const Photo = styled.div`
     background-color: white;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%;
+    background-size: 90%;
     border: 2px solid white;
     border-radius: 50%;
     margin: -38px auto 12px;
